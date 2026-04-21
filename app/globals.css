@@ -21,17 +21,8 @@ body {
   padding-bottom: env(safe-area-inset-bottom);
 }
 
-/* Fubade widget container: let it size to its content, slight contrast tuning */
-.fubade-widget-wrap {
-  background: #f5f3ee;
-  color: #0a0a0a;
-  border-radius: 16px;
-  overflow: hidden;
-  padding: 4px;
-}
-
-.fubade-widget-wrap iframe,
-.fubade-widget-wrap .fussballde_widget {
+.fussballde_widget,
+.fussballde_widget iframe {
   width: 100% !important;
   min-height: 280px;
   border: 0;
