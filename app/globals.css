@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html,
+body {
+  background-color: #0a0a0a;
+  color: #f5f3ee;
+  -webkit-tap-highlight-color: transparent;
+  overscroll-behavior-y: none;
+}
+
+body {
+  font-family: var(--font-system, system-ui), -apple-system, "Segoe UI", sans-serif;
+  min-height: 100svh;
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* Fubade widget container: let it size to its content, slight contrast tuning */
+.fubade-widget-wrap {
+  background: #f5f3ee;
+  color: #0a0a0a;
+  border-radius: 16px;
+  overflow: hidden;
+  padding: 4px;
+}
+
+.fubade-widget-wrap iframe,
+.fubade-widget-wrap .fubade {
+  width: 100% !important;
+  min-height: 280px;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.35s ease-out both;
+}
