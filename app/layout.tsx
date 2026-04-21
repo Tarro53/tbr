@@ -11,8 +11,13 @@ export const metadata: Metadata = {
     title: "TBR",
   },
   icons: {
-    icon: "/logo-192.png",
-    apple: "/logo-192.png",
+    icon: [
+      { url: "/logo-192.png", sizes: "192x192", type: "image/png" },
+      { url: "/logo-512.png", sizes: "512x512", type: "image/png" },
+    ],
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
   },
 };
 
