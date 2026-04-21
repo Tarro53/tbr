@@ -3,9 +3,12 @@ export type Team = {
   name: string;
   shortName: string;
   league: string;
-  widgetNextMatchId: string;
-  fussballDeUrl: string;
+  fupaSpielplanId: string;
+  fupaTabelleId: string;
+  fupaKaderId: string;
 };
+
+export const fupaClubUrl = "https://www.fupa.net/club/tb-rohrbachboxberg";
 
 export const teams: Team[] = [
   {
@@ -13,18 +16,18 @@ export const teams: Team[] = [
     name: "TB Rohrbach",
     shortName: "TBR I",
     league: "1. Mannschaft",
-    widgetNextMatchId: "65f3086b-023f-4ecd-a5ea-48428149ecc2",
-    fussballDeUrl:
-      "https://www.fussball.de/mannschaft/tb-rohrbach-tb-rohrbach-boxberg-baden/-/saison/2526/team-id/011MID43G0000000VTVG0001VTR8C1K7",
+    fupaSpielplanId: "3CfMZl7ab5mgQUlXRIzaLneEMkM",
+    fupaTabelleId: "3CfN3hokAPT1vHBkvlVjHhqAgzB",
+    fupaKaderId: "3CfMntfKfn4SbhOQMIQ08aj4Nit",
   },
   {
     slug: "zweite",
     name: "TB Rohrbach II",
     shortName: "TBR II",
     league: "2. Mannschaft",
-    widgetNextMatchId: "6f4f3a60-8731-4c4e-b3ce-0bd1745f275e",
-    fussballDeUrl:
-      "https://www.fussball.de/mannschaft/tb-rohrbach-2-tb-rohrbach-boxberg-baden/-/saison/2526/team-id/011MIFFLSS000000VTVG0001VTR8C1K7",
+    fupaSpielplanId: "3CfNEeE25aY6DwbefmQdgA5wxfa",
+    fupaTabelleId: "3CfNNKcNb5z4dBJjTroyFz7EJlh",
+    fupaKaderId: "3CfNTfPhub3aLYuhtjaNyUjMHCV",
   },
 ];
 

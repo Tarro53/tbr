@@ -21,10 +21,9 @@ body {
   padding-bottom: env(safe-area-inset-bottom);
 }
 
-.fussballde_widget,
-.fussballde_widget iframe {
+[id^="fp-widget_root-"],
+[id^="fp-widget_root-"] iframe {
   width: 100% !important;
-  min-height: 280px;
   border: 0;
 }
 
