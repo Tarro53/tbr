@@ -42,45 +42,8 @@ body {
   animation: fadeInUp 0.35s ease-out both;
 }
 
-/* --- Homescreen background wappen --- */
-.bg-logo {
-  opacity: 0.32;
-  animation: glow-pulse 4s ease-in-out infinite;
-}
-
-@keyframes glow-pulse {
-  0%,
-  100% {
-    filter: drop-shadow(0 0 60px rgba(216, 30, 30, 0.85))
-      drop-shadow(0 0 140px rgba(216, 30, 30, 0.6))
-      drop-shadow(0 0 260px rgba(216, 30, 30, 0.35));
-  }
-  50% {
-    filter: drop-shadow(0 0 80px rgba(255, 50, 50, 1))
-      drop-shadow(0 0 180px rgba(216, 30, 30, 0.75))
-      drop-shadow(0 0 320px rgba(216, 30, 30, 0.5));
-  }
-}
-
-/* --- Spark that traces the shield outline --- */
-.spark-svg {
-  overflow: visible;
-}
-
-.spark-dot {
-  filter: drop-shadow(0 0 3px rgba(255, 80, 80, 1))
-    drop-shadow(0 0 8px rgba(255, 50, 50, 0.95))
-    drop-shadow(0 0 18px rgba(216, 30, 30, 0.75));
-  animation: spark-twinkle 1.2s ease-in-out infinite;
-  transform-origin: center;
-}
-
-@keyframes spark-twinkle {
-  0%,
-  100% {
-    opacity: 0.9;
-  }
-  50% {
-    opacity: 1;
-  }
+/* --- Small crest glow on team cards --- */
+.crest-glow {
+  filter: drop-shadow(0 0 6px rgba(216, 30, 30, 0.6))
+    drop-shadow(0 0 14px rgba(216, 30, 30, 0.35));
 }
