@@ -42,67 +42,45 @@ body {
   animation: fadeInUp 0.35s ease-out both;
 }
 
-/* --- Homescreen background logo --- */
+/* --- Homescreen background wappen --- */
 .bg-logo {
-  opacity: 0.22;
-  filter: drop-shadow(0 0 32px rgba(216, 30, 30, 0.55))
-    drop-shadow(0 0 80px rgba(216, 30, 30, 0.35));
+  opacity: 0.32;
   animation: glow-pulse 4s ease-in-out infinite;
 }
 
 @keyframes glow-pulse {
   0%,
   100% {
-    filter: drop-shadow(0 0 32px rgba(216, 30, 30, 0.5))
-      drop-shadow(0 0 80px rgba(216, 30, 30, 0.3));
+    filter: drop-shadow(0 0 60px rgba(216, 30, 30, 0.85))
+      drop-shadow(0 0 140px rgba(216, 30, 30, 0.6))
+      drop-shadow(0 0 260px rgba(216, 30, 30, 0.35));
   }
   50% {
-    filter: drop-shadow(0 0 44px rgba(216, 30, 30, 0.8))
-      drop-shadow(0 0 120px rgba(216, 30, 30, 0.5));
+    filter: drop-shadow(0 0 80px rgba(255, 50, 50, 1))
+      drop-shadow(0 0 180px rgba(216, 30, 30, 0.75))
+      drop-shadow(0 0 320px rgba(216, 30, 30, 0.5));
   }
 }
 
-/* --- Orbiting spark around the shield --- */
-.spark-orbit {
-  position: absolute;
-  inset: 0;
-  animation: orbit-rotate 5s linear infinite;
-  pointer-events: none;
+/* --- Spark that traces the shield outline --- */
+.spark-svg {
+  overflow: visible;
 }
 
-.spark {
-  position: absolute;
-  top: -4px;
-  left: 50%;
-  width: 10px;
-  height: 10px;
-  margin-left: -5px;
-  border-radius: 50%;
-  background: #ff4141;
-  box-shadow:
-    0 0 8px 2px rgba(255, 70, 70, 0.95),
-    0 0 18px 6px rgba(216, 30, 30, 0.75),
-    0 0 36px 12px rgba(216, 30, 30, 0.45);
+.spark-dot {
+  filter: drop-shadow(0 0 3px rgba(255, 80, 80, 1))
+    drop-shadow(0 0 8px rgba(255, 50, 50, 0.95))
+    drop-shadow(0 0 18px rgba(216, 30, 30, 0.75));
   animation: spark-twinkle 1.2s ease-in-out infinite;
-}
-
-@keyframes orbit-rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  transform-origin: center;
 }
 
 @keyframes spark-twinkle {
   0%,
   100% {
     opacity: 0.9;
-    transform: scale(1);
   }
   50% {
     opacity: 1;
-    transform: scale(1.25);
   }
 }
