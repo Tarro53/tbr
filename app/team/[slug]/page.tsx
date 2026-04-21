@@ -1,4 +1,3 @@
-import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getTeam, teams } from "@/lib/teams";
@@ -46,16 +45,13 @@ export default async function TeamPage({
         <h2 className="mb-3 text-sm font-semibold uppercase tracking-widest text-tbr-cream/60">
           Nächstes Spiel
         </h2>
-        <FubadeWidget
-          id={team.teamId}
-          type="team-matches"
-          fallbackUrl={team.fussballDeUrl}
-          fallbackLabel="Spielplan auf Fußball.de"
-        />
+        <FubadeWidget id={team.widgetNextMatchId} type="next-match" />
       </section>
 
-      <Link
-        href={`/team/${team.slug}/tabelle`}
+      <a
+        href={team.fussballDeUrl}
+        target="_blank"
+        rel="noopener noreferrer"
         className="fade-in-up mt-2 flex items-center justify-between rounded-2xl bg-tbr-red px-5 py-4 font-semibold text-white shadow-lg shadow-tbr-red/20 transition active:scale-[0.98]"
         style={{ animationDelay: "120ms" }}
       >
@@ -76,11 +72,11 @@ export default async function TeamPage({
             <rect x="12" y="6" width="3" height="12" rx="0.5" />
             <rect x="17" y="13" width="3" height="5" rx="0.5" />
           </svg>
-          Aktuelle Tabelle
+          Tabelle auf Fußball.de
         </span>
         <svg
-          width="22"
-          height="22"
+          width="18"
+          height="18"
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
@@ -89,9 +85,9 @@ export default async function TeamPage({
           strokeLinejoin="round"
           aria-hidden
         >
-          <path d="M9 18l6-6-6-6" />
+          <path d="M7 17L17 7M7 7h10v10" />
         </svg>
-      </Link>
+      </a>
     </main>
   );
 }

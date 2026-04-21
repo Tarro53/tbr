@@ -3,7 +3,7 @@ export type Team = {
   name: string;
   shortName: string;
   league: string;
-  teamId: string;
+  widgetNextMatchId: string;
   fussballDeUrl: string;
 };
 
@@ -13,7 +13,7 @@ export const teams: Team[] = [
     name: "TB Rohrbach",
     shortName: "TBR I",
     league: "1. Mannschaft",
-    teamId: "011MID43G0000000VTVG0001VTR8C1K7",
+    widgetNextMatchId: "65f3086b-023f-4ecd-a5ea-48428149ecc2",
     fussballDeUrl:
       "https://www.fussball.de/mannschaft/tb-rohrbach-tb-rohrbach-boxberg-baden/-/saison/2526/team-id/011MID43G0000000VTVG0001VTR8C1K7",
   },
@@ -22,7 +22,7 @@ export const teams: Team[] = [
     name: "TB Rohrbach II",
     shortName: "TBR II",
     league: "2. Mannschaft",
-    teamId: "011MIFFLSS000000VTVG0001VTR8C1K7",
+    widgetNextMatchId: "6f4f3a60-8731-4c4e-b3ce-0bd1745f275e",
     fussballDeUrl:
       "https://www.fussball.de/mannschaft/tb-rohrbach-2-tb-rohrbach-boxberg-baden/-/saison/2526/team-id/011MIFFLSS000000VTVG0001VTR8C1K7",
   },

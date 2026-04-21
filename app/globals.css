@@ -31,9 +31,10 @@ body {
 }
 
 .fubade-widget-wrap iframe,
-.fubade-widget-wrap .fubade {
+.fubade-widget-wrap .fussballde_widget {
   width: 100% !important;
   min-height: 280px;
+  border: 0;
 }
 
 @keyframes fadeInUp {
