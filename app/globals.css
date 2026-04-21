@@ -41,3 +41,68 @@ body {
 .fade-in-up {
   animation: fadeInUp 0.35s ease-out both;
 }
+
+/* --- Homescreen background logo --- */
+.bg-logo {
+  opacity: 0.22;
+  filter: drop-shadow(0 0 32px rgba(216, 30, 30, 0.55))
+    drop-shadow(0 0 80px rgba(216, 30, 30, 0.35));
+  animation: glow-pulse 4s ease-in-out infinite;
+}
+
+@keyframes glow-pulse {
+  0%,
+  100% {
+    filter: drop-shadow(0 0 32px rgba(216, 30, 30, 0.5))
+      drop-shadow(0 0 80px rgba(216, 30, 30, 0.3));
+  }
+  50% {
+    filter: drop-shadow(0 0 44px rgba(216, 30, 30, 0.8))
+      drop-shadow(0 0 120px rgba(216, 30, 30, 0.5));
+  }
+}
+
+/* --- Orbiting spark around the shield --- */
+.spark-orbit {
+  position: absolute;
+  inset: 0;
+  animation: orbit-rotate 5s linear infinite;
+  pointer-events: none;
+}
+
+.spark {
+  position: absolute;
+  top: -4px;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  margin-left: -5px;
+  border-radius: 50%;
+  background: #ff4141;
+  box-shadow:
+    0 0 8px 2px rgba(255, 70, 70, 0.95),
+    0 0 18px 6px rgba(216, 30, 30, 0.75),
+    0 0 36px 12px rgba(216, 30, 30, 0.45);
+  animation: spark-twinkle 1.2s ease-in-out infinite;
+}
+
+@keyframes orbit-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spark-twinkle {
+  0%,
+  100% {
+    opacity: 0.9;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.25);
+  }
+}
