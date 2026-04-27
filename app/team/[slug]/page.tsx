@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { getTeam, teams, fupaClubUrl } from "@/lib/teams";
 import FupaWidget from "@/components/FupaWidget";
 import FupaScript from "@/components/FupaScript";
+import FussballdeWidget from "@/components/FussballdeWidget";
 import BackLink from "@/components/BackLink";
 
 export function generateStaticParams() {
@@ -49,14 +50,29 @@ export default async function TeamPage({
         <FupaWidget id={team.fupaSpielplanId} />
       </section>
 
-      <section className="fade-in-up mb-10" style={{ animationDelay: "80ms" }}>
+      {team.fussballdeNextMatchId && (
+        <section
+          className="fade-in-up mb-10"
+          style={{ animationDelay: "80ms" }}
+        >
+          <h2 className="mb-3 text-sm font-semibold uppercase tracking-widest text-tbr-cream/60">
+            Nächster Spieltag
+          </h2>
+          <FussballdeWidget
+            id={team.fussballdeNextMatchId}
+            type="next-match"
+          />
+        </section>
+      )}
+
+      <section className="fade-in-up mb-10" style={{ animationDelay: "160ms" }}>
         <h2 className="mb-3 text-sm font-semibold uppercase tracking-widest text-tbr-cream/60">
           Tabelle
         </h2>
         <FupaWidget id={team.fupaTabelleId} />
       </section>
 
-      <section className="fade-in-up mb-6" style={{ animationDelay: "160ms" }}>
+      <section className="fade-in-up mb-6" style={{ animationDelay: "240ms" }}>
         <h2 className="mb-3 text-sm font-semibold uppercase tracking-widest text-tbr-cream/60">
           Kader
         </h2>

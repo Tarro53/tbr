@@ -6,6 +6,7 @@ export type Team = {
   fupaSpielplanId: string;
   fupaTabelleId: string;
   fupaKaderId: string;
+  fussballdeNextMatchId?: string;
 };
 
 export const fupaClubUrl = "https://www.fupa.net/club/tb-rohrbachboxberg";
@@ -19,6 +20,7 @@ export const teams: Team[] = [
     fupaSpielplanId: "3CfMZl7ab5mgQUlXRIzaLneEMkM",
     fupaTabelleId: "3CfN3hokAPT1vHBkvlVjHhqAgzB",
     fupaKaderId: "3CfMntfKfn4SbhOQMIQ08aj4Nit",
+    fussballdeNextMatchId: "6f4f3a60-8731-4c4e-b3ce-0bd1745f275e",
   },
   {
     slug: "zweite",
@@ -28,6 +30,7 @@ export const teams: Team[] = [
     fupaSpielplanId: "3CfNEeE25aY6DwbefmQdgA5wxfa",
     fupaTabelleId: "3CfNNKcNb5z4dBJjTroyFz7EJlh",
     fupaKaderId: "3CfNTfPhub3aLYuhtjaNyUjMHCV",
+    fussballdeNextMatchId: undefined,
   },
 ];
 
