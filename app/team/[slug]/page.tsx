@@ -4,6 +4,7 @@ import { getTeam, teams, fupaClubUrl } from "@/lib/teams";
 import FupaWidget from "@/components/FupaWidget";
 import FupaScript from "@/components/FupaScript";
 import FussballdeWidget from "@/components/FussballdeWidget";
+import FussballdeScript from "@/components/FussballdeScript";
 import BackLink from "@/components/BackLink";
 
 export function generateStaticParams() {
@@ -94,6 +95,7 @@ export default async function TeamPage({
       </a>
 
       <FupaScript />
+      <FussballdeScript />
     </main>
   );
 }
