@@ -57,7 +57,14 @@ export default async function TeamPage({
         <FupaWidget id={team.fupaTabelleId} />
       </section>
 
-      <section className="fade-in-up mb-6" style={{ animationDelay: "160ms" }}>
+      <section className="fade-in-up mb-10" style={{ animationDelay: "160ms" }}>
+        <h2 className="mb-3 text-sm font-semibold uppercase tracking-widest text-tbr-cream/60">
+          News
+        </h2>
+        <FussballdeWidget id={team.fussballdeNewsId} type="news" />
+      </section>
+
+      <section className="fade-in-up mb-6" style={{ animationDelay: "240ms" }}>
         <h2 className="mb-3 text-sm font-semibold uppercase tracking-widest text-tbr-cream/60">
           Kader
         </h2>

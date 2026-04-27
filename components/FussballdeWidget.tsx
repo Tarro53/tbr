@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 
-type WidgetType = "next-match" | "last-match";
+type WidgetType = "next-match" | "last-match" | "news";
 
 type Props = {
   id: string;
