@@ -126,7 +126,7 @@ export default function HomePage() {
             className="fade-in-up group relative flex aspect-square flex-col items-center justify-center gap-2 overflow-hidden rounded-3xl border border-white/10 bg-white/[0.04] p-3 transition active:scale-[0.96]"
             style={{ animationDelay: `${(teams.length + i) * 80}ms` }}
           >
-            <span className="flex h-7 w-7 items-center justify-center text-tbr-cream/85 transition group-hover:text-tbr-red">
+            <span className="flex h-7 w-7 items-center justify-center text-tbr-red">
               {link.icon}
             </span>
             <span className="text-[11px] font-medium uppercase tracking-widest text-tbr-cream/70">
